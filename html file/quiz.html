@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Page</title>
+  <link rel="stylesheet" href="../css structure/quiz.css">
+
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body>
+  <header>
+    <div class="main-header-container">
+      <!-- This container for header top section -->
+      <div class="container">
+        <!-- this logo class for website imageLogo and Name  -->
+        <div class="logo">
+          <!-- <img src="./images/login-img-2.jpg" alt="Quiz Logo"> -->
+        </div>
+        <h3>Quiz Instint</h3>
+
+        <!-- this navbar-start-to-mid for my mid quiz test for prepretion -->
+        <div class="navbar-start-to-mid">
+          <ul>
+            <li>
+              <a href="html">HTML</a>
+              <!-- <i class="fas fa-chevron-down"></i> -->
+            </li>
+            <!-- <li>
+                <select name="" id="">
+                  <option value="">HTML</option>
+                  <option value="">HTML easy</option>
+                  <option value="">HTML Normal</option>
+                  <option value="">HTML Hard</option>
+                </select>
+              </li> -->
+            <li><a href="css">CSS</a>
+              <!-- <i class="fas fa-chevron-down"> -->
+              </i>
+            </li>
+            <li><a href="javascript">JavaScript</a>
+              <!-- <i class="fas fa-chevron-down"></i> -->
+            </li>
+            <li>
+              <a href="react"> React</a>
+              <!-- <i class="fas fa-chevron-down"></i> -->
+            </li>
+          </ul>
+        </div>
+        <!-- this navbar-end for login sign in and sign in and search quizes -->
+        <div class="navbar-end">
+          <div class="btn">
+            <a id='search' href="">Search</a>
+            <button class="button-bk"><a href="./html file/login.html">Login</a>
+              <i class="fa-thin fa-arrow-up-right"></i>
+            </button>
+            <button class="button-bk box"><a href="./html file/signup.html">Sign Up</a>
+              <i class="fa-thin fa-arrow-up-right"></i>
+            </button>
+          </div>
+        </div>
+      </div> <!-- end of first container -->
+
+
+      <div class="mid-container">
+        <div class="mid-logo">
+          <img id="q-img-logo" src="../images/pngwing.com.png" alt="q-logo">
+        </div>
+        <div class="mid-heading">
+          <h1>
+            Welcome to Quiz Instint.
+          </h1>
+          <h3>
+            We Build Amazing
+          </h3>
+          <h2>
+            Design
+          </h2>
+        </div>
+      </div>
+    </div><!-- end of main-header-container -->
+
+  </header> <!-- end for header  -->
+
+
+  <!---------------------- Quiz Section Code ------------------- -->
+
+
+  <div class="bk-quiz-container center" id="bk-quiz">
+    <div class="html-quiz-bk center">
+      <div class="sty-container center">
+        <div class="question-options-container">
+      <div class="questions-div center">
+        <p id="question"></p>
+      </div>
+      <!-- options contrainer for options -->
+      <div class="options-container center">
+        <!-- .option1 block   -->
+        <div class="option-div center">
+          <label class="option-styling" id="opt-one">
+            <input type="radio" name="answer" class="answer-value" onclick="enableBtn()" value="1">
+            <span id="option1"></span>
+          </label>
+        </div>
+        <!-- .option2 block   -->
+        <div class="option-div center">
+          <label class="option-styling opt-two">
+            <input type="radio" name="answer" class="answer-value" onclick="enableBtn()" value="2">
+            <span id="option2"></span>
+          </label>
+        </div>
+        <!-- .option3 block   -->
+        <div class="option-div center">
+          <label class="option-styling">
+            <input type="radio" name="answer" class="answer-value" onclick="enableBtn()" value="3">
+            <span id="option3"></span>
+          </label>
+        </div>
+        <!-- .option4 block   -->
+        <div class="option-div center">
+          <label class="option-styling">
+            <input type="radio" name="answer" class="answer-value" onclick="enableBtn()" value="4">
+            <span id="option4"></span>
+          </label>
+        </div> <!-- end of option 4 div -->
+        <div class="btn btn-next">
+          <button disabled id="button-bk" onclick="nextQuestion()"  class="animated-button">Next</button>
+        </div>
+      </div> <!-- end of options div container-->
+    </div>
+</div>  <!-- end of sty conatiner -->
+
+    </div> <!-- end html-quiz-bk center div -->
+
+  </div> <!-- end  main bk-quiz-container center  div-->
+  
+  <section>
+    <!-- <div class="quiz-html-container"></div> -->
+    <div class="card-quiz-template">
+      <div class="card-quiz">
+        <div class="card-quiz-logo">
+          <img src="../images/html-logo.png" alt="html logo">
+        </div>
+        <h4>Welcome To HTML Quiz</h4>
+        <p>
+          Enhance your HTML proficiency with a professional quiz. Gain valuable insights and improve your coding
+          abilities. Level up your web development expertise and showcase your HTML knowledge. Join now and take your
+          HTML skills to the next level.</p>
+        <div class="btn">
+          <button id="html-button" onclick="htmlQuiz()">HTML</button>
+        </div>
+      </div>
+      
+
+
+
+      <div class="card-quiz-two">
+        <div class="card-quiz-logo-two">
+          <img src="../images/css-logo.png" alt="css logo">
+        </div>
+        <h4>Welcome To Css Quiz</h4>
+        <p>Get ready to test your CSS knowledge with our interactive quiz! Click the "CSS" button to begin and
+          showcase your expertise in CSS styling. From selectors to layouts, this quiz will challenge your
+          understanding of CSS concepts. Show off your skills and become a CSS pro!</p>
+        <div class="btn">
+          <button  id="button-css" onclick="css()">CSS</button>
+        </div>
+      </div>
+
+
+      <div class="card-quiz-three">
+        <div class="card-quiz-logo-three">
+          <img src="../images/js-logo.png" alt="js logo">
+        </div>
+        <h4>Welcome To JS Quiz</h4>
+        <p>
+          Ignite your JavaScript skills, conquer coding challenges, and embark on a rewarding learning journey with
+          our interactive quiz. Level up your programming prowess and unlock new horizons in JavaScript. Start the
+          quiz and unleash your coding potential!</p>
+        <div class="btn">
+          <button  id="button-js" onclick="javascript()">JavaScript</button>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+  </main>
+  <!--   
+      <main>
+        <section>
+          <div class="mid-container">
+            <div class="mid-logo">
+
+            </div>
+            <div class="mid-heading">
+              <h3>
+                Welcome to Quiz Instint.
+              </h3>
+              <h2>
+                We Build Amazing 
+              </h2>
+              <h1>
+                Design
+              </h1>
+            </div>
+          </div>
+        </section>
+      </main> -->
+      
+      <!-- Include SweetAlert library -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.3/dist/sweetalert2.all.min.js"></script>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>
