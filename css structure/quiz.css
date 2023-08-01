@@ -273,7 +273,7 @@ body {
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
     color: black;
-
+cursor: pointer;
 
 }
 
@@ -388,7 +388,6 @@ body {
     -webkit-user-select: none;
     touch-action: manipulation;
     white-space: nowrap;
-    will-change: box-shadow, transform;
     font-size: 18px;
 }
 
