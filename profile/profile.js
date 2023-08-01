@@ -46,7 +46,7 @@ onAuthStateChanged(auth, (user) => {
     getUserCurrentData(uid, user.email);
     document.getElementById("email").innerHTML = user.email;
     // document.getElementById('name').innerHTML = user.userUsername;
-    console.log("user==>", user.userFullName);
+    // console.log("user==>", user.userFullName);
 
     // ...
   } else {
@@ -66,7 +66,8 @@ console.log("q==>",q);
   querySnapshot.forEach((doc) => {
 
     console.log(doc.id, " => ", doc.data());
-    document.getElementById('name').innerHTML = doc.data().userFullName; 
+    document.getElementById('name').innerHTML = doc.data().name; 
+    document.getElementById('userName').innerHTML = doc.data().userName; 
 
   });
 

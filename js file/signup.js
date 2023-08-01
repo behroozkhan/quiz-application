@@ -2,7 +2,7 @@
 // []-------//------//-----//THIS CODE FOR SIGN UP PAGE Using Firbase------///------///-----///--------[]
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-import {getAuth,  signInWithEmailAndPassword ,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import {getAuth,  createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
 import { getFirestore,collection, addDoc } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -58,7 +58,7 @@ signUpBtn.addEventListener("click", () => {
     cPassword
   };
   
-  createUserWithEmailAndPassword(auth, userlistObj.userEmail, userlistObj.userPassword)
+  createUserWithEmailAndPassword(auth, userlistObj.email, userlistObj.password)
     .then(async(userCredential) => {
       const user = userCredential.user;
       try {

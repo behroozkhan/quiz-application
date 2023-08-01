@@ -8,8 +8,6 @@
 
 // })
 
-
-
 // function loginPage(userlistObj) {
 //   let userNameLoginValue = userInpLogin.value.toLowerCase();
 //   let passLoginValue = passInpLogin.value.toLowerCase();
@@ -154,7 +152,7 @@ function loginPage(userlistObj) {
 
 //     signInWithEmailAndPassword(auth, email, password)
 //       .then((userCredential) => {
-//         // Signed in 
+//         // Signed in
 //         const user = userCredential.user;
 //         // ...
 //       })
@@ -162,8 +160,6 @@ function loginPage(userlistObj) {
 //         const errorCode = error.code;
 //         const errorMessage = error.message;
 //       });
-
-
 
 //   nameInp.value = "";
 //   userInp.value = "";
@@ -306,6 +302,22 @@ function htmlQuiz(userPick) {
   if (index > htmlQuizQuestions.length - 1) {
     console.log("Questions End It.");
     console.log((score / htmlQuizQuestions.length) * 100);
+    console.log("Questions End It.");
+    console.log((score / htmlQuizQuestions.length) * 100);
+
+    const winningPercentage = (score / htmlQuizQuestions.length) * 100;
+    Swal.fire({
+      title: "Quiz Instint",
+      text: `Your Winning Percentage: ${winningPercentage.toFixed(2)}%`,
+      showClass: {
+        popup: "animate__animated animate__fadeInDown",
+      },
+      hideClass: {
+        popup: "animate__animated animate__fadeOutUp",
+        
+      },
+    });
+    // window.location.href = "../index.html"
   } else {
     ques.innerText = `Q:${htmlQuizQuestions[index].question}`;
     option1.innerText = `i: ${htmlQuizQuestions[index].option1}`;
