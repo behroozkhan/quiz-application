@@ -39,15 +39,23 @@ signUpBtn.addEventListener("click", () => {
   let emailInpValue = emailInp.value.toLowerCase();
   let passInpValue = passInp.value;
   let cPassInpValue = cPassInp.value;
+  
+  let name = nameInp.value.toLowerCase();
+  let userName = userInp.value.toLowerCase();
+  let email = emailInp.value.toLowerCase();
+  let password = passInp.value;
+  let cPassword = cPassInp.value;
+
+
 
   // inpValueList = `${nameInpValue} ${userInpValue} ${emailInpValue} ${passInpValue} ${cPassInpValue}`;
 
   let userlistObj = {
-    userFullName: nameInpValue,
-    userUsername: userInpValue,
-    userEmail: emailInpValue,
-    userPassword: passInpValue,
-    userCnfrmPassword: cPassInpValue,
+    name,
+    userName,
+    email,
+    password,
+    cPassword
   };
   
   createUserWithEmailAndPassword(auth, userlistObj.userEmail, userlistObj.userPassword)
