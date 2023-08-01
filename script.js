@@ -1,12 +1,12 @@
 // {}-----//------------//THIS CODE FOR LOGIN PAGE------///---------///-------///---------{}
-let userInpLogin = document.querySelectorAll("#username-login")[0];
-let passInpLogin = document.querySelectorAll("#password-login")[0];
-let throwMessage = document.querySelectorAll("#result")[0];
-let loginBtn = document.querySelector('#login-btn');
+// let userInpLogin = document.querySelectorAll("#username-login")[0];
+// let passInpLogin = document.querySelectorAll("#password-login")[0];
+// let throwMessage = document.querySelectorAll("#result")[0];
+// let loginBtn = document.querySelector('#login-btn');
 
-loginBtn.addEventListener('click',()=>{
+// loginBtn.addEventListener('click',()=>{
 
-})
+// })
 
 
 

@@ -2,7 +2,7 @@
 // []-------//------//-----//THIS CODE FOR SIGN UP PAGE Using Firbase------///------///-----///--------[]
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-import {getAuth,  createUserWithEmailAndPassword,signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import {getAuth,  signInWithEmailAndPassword ,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
 import { getFirestore,collection, addDoc } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -18,6 +18,11 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+
+
+
+
+
 
 let nameInp = document.querySelectorAll("#name")[0];
 let userInp = document.querySelectorAll("#username")[0];
@@ -44,7 +49,7 @@ signUpBtn.addEventListener("click", () => {
     userPassword: passInpValue,
     userCnfrmPassword: cPassInpValue,
   };
-  const auth = getAuth();
+  
   createUserWithEmailAndPassword(auth, userlistObj.userEmail, userlistObj.userPassword)
     .then(async(userCredential) => {
       const user = userCredential.user;
@@ -64,18 +69,7 @@ signUpBtn.addEventListener("click", () => {
       console.log("errorMessage==>", errorMessage);
     });
 
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in 
-        const user = userCredential.user;
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      });
-
-
+      
 
   nameInp.value = "";
   userInp.value = "";
@@ -83,3 +77,5 @@ signUpBtn.addEventListener("click", () => {
   passInp.value = "";
   cPassInp.value = "";
 });
+
+
